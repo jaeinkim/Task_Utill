@@ -16,4 +16,4 @@ while True:
     # m.typewrite('naver.com')
     
     m.press('ctrl')
-    time.sleep(5)
+    time.sleep(120)
