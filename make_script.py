@@ -42,11 +42,16 @@ param_str1 = '2023-10-13'
 # param_str2 = '2023-06-25'
 param_str2 = '2023-10-15'
 
+
+# 사번 입력
+# URCODE = '212758'
+URCODE = '161473' #유리아
+
 merged_param_list = list(zip(param_list, param_list2))
 
 for str1, str2 in merged_param_list[::-1]:
     # print(f'''console.log(CFN_CallAjaxJson('/WebSite/Extension/RSV/RsvAjax.aspx', '{{"METHOD":"SetResvAnswer","URCODE":"212758","ResvSubCode":{str1},"ResvCalID":{str2},"StartDate": ''' )
-    print(f'''console.log(CFN_CallAjaxJson('/WebSite/Extension/RSV/RsvAjax.aspx', '{{"METHOD":"SetResvAnswer","URCODE":"212758","ResvSubCode":{str1},"ResvCalID":{str2},"StartDate":"{param_str1}","StartTime":null,"EndDate":"{param_str2}","EndTime":null,"ResvToken": "'+Rsv.GetResvCalInfo_Chk({str1}, {str2}, '{param_str1}').token+'\\" ,"ItemCode1":"1205","ItemAnswer1":"8","ItemCode2":"1206","ItemAnswer2":"Y","ItemCode3":0,"ItemAnswer3":null,"ItemCode4":0,"ItemAnswer4":null,"ItemCode5":0,"ItemAnswer5":null,"ItemCode6":0,"ItemAnswer6":null,"ItemCode7":0,"ItemAnswer7":null,"ItemCode8":0,"ItemAnswer8":null,"ItemCode9":0,"ItemAnswer9":null,"ItemCode10":0,"ItemAnswer10":null}}', false, null));''')
+    print(f'''console.log(CFN_CallAjaxJson('/WebSite/Extension/RSV/RsvAjax.aspx', '{{"METHOD":"SetResvAnswer","URCODE":"{URCODE}","ResvSubCode":{str1},"ResvCalID":{str2},"StartDate":"{param_str1}","StartTime":null,"EndDate":"{param_str2}","EndTime":null,"ResvToken": "'+Rsv.GetResvCalInfo_Chk({str1}, {str2}, '{param_str1}').token+'\\" ,"ItemCode1":"1205","ItemAnswer1":"8","ItemCode2":"1206","ItemAnswer2":"Y","ItemCode3":0,"ItemAnswer3":null,"ItemCode4":0,"ItemAnswer4":null,"ItemCode5":0,"ItemAnswer5":null,"ItemCode6":0,"ItemAnswer6":null,"ItemCode7":0,"ItemAnswer7":null,"ItemCode8":0,"ItemAnswer8":null,"ItemCode9":0,"ItemAnswer9":null,"ItemCode10":0,"ItemAnswer10":null}}', false, null));''')
     # print('hi')
 
 
